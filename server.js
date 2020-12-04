@@ -6,6 +6,8 @@ const passport = require('./config/ppConfig');
 const flash = require('connect-flash');
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const app = express();
+const axios = require('axios'); 
+let db = require("./models")
 
 // isLoggedIn middleware
 const isLoggedIn = require('./middleware/isLoggedIn');
