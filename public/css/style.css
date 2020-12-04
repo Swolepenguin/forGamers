@@ -1,4 +1,4 @@
-nav ul li {
+/* nav ul li {
   text-decoration: none;
   display: inline-block;
   margin-right: .3em;
@@ -6,4 +6,68 @@ nav ul li {
 
 h1 {
   color: chartreuse;
+} */
+#body{
+  background-color:black;
+}
+#title{
+  text-align: center;
+  color: blue;
+}
+
+.main{
+  background-color: blue;
+}
+
+#heading{
+  text-align: center;
+}
+
+#login{
+  position: absolute; right: 80px;
+  top: 55px;
+}
+
+#lead{
+  text-align: center;
+}
+
+.jumbotron{
+  color:blue;
+}
+.sign{
+  color: blue;
+  text-align: center;
+}
+.signup{
+  color: blue;
+  text-align: center;
+  display: grid;
+}
+#createacc{
+text-align: center;
+padding: 25px;
+}
+
+.log{
+  color: blue;
+  text-align: center;
+}
+
+#fav{
+  color: blue;
+  font-size: 250%;
+  text-align: center;
+}
+
+#new{
+  color: blue;
+  text-align: center;
+  font-size: 250%;
+}
+
+#top{
+  color: blue;
+  font-size: 250%;
+  text-align: center;
 }
