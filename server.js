@@ -66,22 +66,14 @@ app.get('/',(req,res)=>{
   res.render('landing')
 })
 
-app.get('/login',(req,res)=>{
-  res.render('login')
-})
-
-app.get('/signup',(req,res)=>{
-  res.render('signup')
-})
-
 app.get('/faves',(req,res)=>{
   db.favorites.findAll().then(allFaves =>{
       res.render('faves', {allFaves})
   })
 })
 
-app.get('/home',(req,res)=>{
-  res.render('home')
+app.get('/homep',(req,res)=>{
+  res.render('homep')
 })
 
 

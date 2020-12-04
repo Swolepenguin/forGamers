@@ -25,7 +25,7 @@ h1 {
 
 #login{
   position: absolute; right: 80px;
-  top: 55px;
+  top: 1px;
 }
 
 #lead{
@@ -70,4 +70,8 @@ padding: 25px;
   color: blue;
   font-size: 250%;
   text-align: center;
+}
+
+#list{
+  padding: 0%;
 }
