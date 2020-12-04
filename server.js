@@ -14,6 +14,8 @@ const isLoggedIn = require('./middleware/isLoggedIn');
 
 app.set('view engine', 'ejs');
 
+app.use(express.static('public'))
+
 app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
@@ -58,8 +60,33 @@ app.get('/profile', isLoggedIn, (req, res) => {
 
 
 app.use('/auth', require('./routes/auth'));
+// My routes
 
-const PORT = process.env.PORT || 3000;
+app.get('/',(req,res)=>{
+  res.render('landing')
+})
+
+app.get('/login',(req,res)=>{
+  res.render('login')
+})
+
+app.get('/signup',(req,res)=>{
+  res.render('signup')
+})
+
+app.get('/faves',(req,res)=>{
+  db.favorites.findAll().then(allFaves =>{
+      res.render('faves', {allFaves})
+  })
+})
+
+app.get('/home',(req,res)=>{
+  res.render('home')
+})
+
+
+
+const PORT = process.env.PORT || 4000;
 const server = app.listen(PORT, () => {
   console.log(`🎧 You're listening to the smooth sounds of port ${PORT} 🎧`);
 });
