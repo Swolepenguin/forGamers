@@ -72,8 +72,8 @@ app.get('/faves',(req,res)=>{
   })
 })
 
-app.get('/homep',(req,res)=>{
-  res.render('homep')
+app.get('/main',(req,res)=>{
+  res.render('main')
 })
 
 

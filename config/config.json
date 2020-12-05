@@ -2,21 +2,21 @@
   "development": {
     "username": "postgres",
     "password": "winsome1",
-    "database": "user_development",
+    "database": "forgamers_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "winsome1",
-    "database": "user_test",
+    "database": "forgamers_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
     "password": "winsome1",
-    "database": "user_production",
+    "database": "forgamers_production",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "use_env_variable": "DATABASE_URL"
