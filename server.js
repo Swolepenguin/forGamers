@@ -8,6 +8,7 @@ const SECRET_SESSION = process.env.SECRET_SESSION;
 const app = express();
 const axios = require('axios'); 
 let db = require("./models")
+let rawg = require('./routes/controllers/rawg')
 
 // isLoggedIn middleware
 const isLoggedIn = require('./middleware/isLoggedIn');
@@ -74,8 +75,10 @@ app.get('/faves',(req,res)=>{
 
 app.get('/main',(req,res)=>{
   res.render('main')
+  // console.log('hello')
 })
 
+app.use('/newReleases',rawg)
 
 
 const PORT = process.env.PORT || 4000;
