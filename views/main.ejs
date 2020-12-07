@@ -1,5 +1,25 @@
-<!-- <div id="new">New Releases</div>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<%console.log('here');%> 
+<script>
+  debugger
+  // function getInfo(){
+    
+    let games 
+    debugger
+    fetch('http://localhost:4000/newReleases')
+              .then(res => {
+                debugger
+                games = res.json()          
+              })
+              debugger
+    // return games
+  // }
+</script>
+<% console.log('here3'); %>
+<div id="new">New Releases</div>
+
+
+
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -53,5 +73,5 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol> -->
+  </ol> --> -->
 
