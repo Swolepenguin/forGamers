@@ -1,20 +1,26 @@
-<%console.log('here');%> 
+<ul>
+  <% games.forEach(gm => { %>
+<li>      <%= gm.name %>     </li>
+<%  }) %>
+</ul>
 <script>
   debugger
-  // function getInfo(){
-    
-    let games 
-    debugger
-    fetch('http://localhost:4000/newReleases')
-              .then(res => {
-                debugger
-                games = res.json()          
-              })
-              debugger
+ 
+  //  let games 
+    // fetch('http://localhost:4000/newReleases')
+    //             .then(res => res.json())
+    //             .then(data => {
+    //               games = data.slice(0,3)    
+    //               debugger      
+    //             })
+    //           debugger
+    // console.log(games)
     // return games
-  // }
+    
 </script>
-<% console.log('here3'); %>
+
+ 
+
 <div id="new">New Releases</div>
 
 
