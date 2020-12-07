@@ -20,18 +20,7 @@ router.get('/', function(req,res){
            topRated: resArray[0].data.results.slice(0,3)
        })
    })
-    // .then(res => res.json(res.data.results))
-    // .then(data =>{ 
-    //     // console.log(data.data.results)
-    //     console.log(data.data.results)
-    //     res.render('main' , {newGames : data.data.results.slice(0,3)})
-    // })
-    // console.log('hello')
-    // .then(res => {
-    //     console.log(res.data)
-    //     res.render('main',{gData : res.data.results})
-    // })
-    // console.log('hello')
+
     .catch(error => res.json(error))
     console.log('hello')
 })

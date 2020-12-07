@@ -1,0 +1,24 @@
+server.js notes 
+
+// app.get('/main', (req,res)=>{
+//   res.render('main')
+// })
+
+
+// app.use('/newReleases',newReleases)
+
+
+newReleases page notes
+
+ // .then(res => res.json(res.data.results))
+    // .then(data =>{ 
+    //     // console.log(data.data.results)
+    //     console.log(data.data.results)
+    //     res.render('main' , {newGames : data.data.results.slice(0,3)})
+    // })
+    // console.log('hello')
+    // .then(res => {
+    //     console.log(res.data)
+    //     res.render('main',{gData : res.data.results})
+    // })
+    // console.log('hello')
