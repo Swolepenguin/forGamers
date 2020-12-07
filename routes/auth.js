@@ -29,7 +29,7 @@ router.post('/signup', (req, res) => {
       console.log(`${user.name} was created`);
       // Flash Message
       const successObject = {
-        successRedirect: '/',
+        successRedirect: '/main',
         successFlash: 'Account created and logging in...'
       }
       passport.authenticate('local', successObject)(req, res);

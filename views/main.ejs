@@ -1,38 +1,46 @@
 
-<script>
-  // debugger
- 
-  //  let games 
-    // fetch('http://localhost:4000/newReleases')
-    //             .then(res => res.json())
-    //             .then(data => {
-    //               games = data.slice(0,3)    
-    //               debugger      
-    //             })
-    //           debugger
-    // console.log(games)
-    // return games
-    
-</script>
+<div id="SFGH">
+  <h1>
+    Search For Games Here
+  </h1>
+</div>
 
-
+<div id="searchbar">
+  <input type="text" placeholder="search"></input>
+</div>
  
 
 <div id="new"> Top Rated </div>
-
+<div class="cp">
 <ul>
   <% newGames.forEach(gm => { debugger %>
 <img class='gameimg' src="<%= gm.background_image %> "> </img>       
 <%  }) %>
 </ul>
-
+</div>
+<div class="displayT">
+  <ul>
+    <% newGames.forEach(gm => { %>
+      <h3> Title: <%= gm.name  %> </h3> 
+    <% }) %> 
+  </ul>
+</div>
 
 <div id="new"> New Releases </div>
+<div class="cp">
 <ul>
   <% topRated.forEach(gm => { debugger %>
 <img class='gameimg' src="<%= gm.background_image %> "> </img>       
 <%  }) %>
 </ul>
+</div>
+<div class="displayT">
+  <ul>
+    <% topRated.forEach(gm => { %>
+      <h3> Title: <%= gm.name  %> </h3> 
+    <% }) %> 
+  </ul>
+</div>
 
 <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">

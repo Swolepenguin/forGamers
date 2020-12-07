@@ -80,3 +80,29 @@ padding: 25px;
   width: 300px;
   height: 300px;
 }
+
+.cp{
+  text-align: center;
+}
+
+#buttonR{
+  text-align: center;
+  background-color: gray;
+  color: blue;
+}
+
+#searchbar{
+  text-align: center;
+}
+
+#SFGH{
+  color: blue;
+  text-align: center;
+}
+
+.displayT{
+  color: blue;
+  text-align: center;
+  display: inline;
+
+}
