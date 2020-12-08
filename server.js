@@ -93,7 +93,7 @@ app.use('/games',searchedGames)
 
 app.use('/main',newReleases)
 
-// app.use('/landing',synopsis)
+app.use('/synopsis',synopsis)
 
 app.get('/',(req,res) => {
   const url3= `https://api.rawg.io/api/games?key=${process.env.API_KEY}&search=${req.query.game}&page=1&page_size=25`
