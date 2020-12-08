@@ -9,6 +9,7 @@ const app = express();
 const axios = require('axios'); 
 let db = require("./models")
 let newReleases = require('./routes/controllers/newReleases')
+let searchedGames = require('./routes/controllers/searchedgame')
 
 // isLoggedIn middleware
 const isLoggedIn = require('./middleware/isLoggedIn');
@@ -74,11 +75,28 @@ app.get('/faves',(req,res)=>{
   })
 })
 
+// app.get('/games',(req,res)=>{
+//   res.render('games')
+// })
+
+app.use('/games',searchedGames)
+
 // app.get('/main', (req,res)=>{
 //   res.render('main')
 // })
 
 app.use('/main',newReleases)
+
+app.get('/',(req,res) => {
+  const url3= `https://api.rawg.io/api/games?key=${process.env.API_KEY}&search=${req.query.game}&page=1&page_size=25`
+  axios.get(url3
+    ).then(resArray =>{
+        console.log('hello')
+        res.render('games',{
+            searchedGame: resArray.data.results.slice(0,13)
+        })
+    })
+})
 
 // app.use('/newReleases',newReleases)
 
