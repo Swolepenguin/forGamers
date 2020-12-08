@@ -10,7 +10,7 @@ const axios = require('axios');
 let db = require("./models")
 let newReleases = require('./routes/controllers/newReleases')
 let searchedGames = require('./routes/controllers/searchedgame')
-
+let synopsis = require('./routes/controllers/synopsis')
 // isLoggedIn middleware
 const isLoggedIn = require('./middleware/isLoggedIn');
 
@@ -65,15 +65,21 @@ app.get('/profile', isLoggedIn, (req, res) => {
 app.use('/auth', require('./routes/auth'));
 // My routes
 
-app.get('/',(req,res)=>{
-  res.render('landing')
-})
+// app.get('/',(req,res)=>{
+//   res.render('landing')
+// })
 
-app.get('/faves',(req,res)=>{
+app.get('/faves',isLoggedIn,(req,res)=>{
   db.favorites.findAll().then(allFaves =>{
       res.render('faves', {allFaves})
   })
 })
+
+app.get('/landing',(req,res)=>{
+  res.render('landing');
+});
+
+
 
 // app.get('/games',(req,res)=>{
 //   res.render('games')
@@ -87,6 +93,8 @@ app.use('/games',searchedGames)
 
 app.use('/main',newReleases)
 
+// app.use('/landing',synopsis)
+
 app.get('/',(req,res) => {
   const url3= `https://api.rawg.io/api/games?key=${process.env.API_KEY}&search=${req.query.game}&page=1&page_size=25`
   axios.get(url3
@@ -97,6 +105,8 @@ app.get('/',(req,res) => {
         })
     })
 })
+
+
 
 // app.use('/newReleases',newReleases)
 
