@@ -12,6 +12,7 @@ let newReleases = require('./routes/controllers/newReleases')
 let searchedGames = require('./routes/controllers/searchedgame')
 let synopsis = require('./routes/controllers/synopsis')
 // isLoggedIn middleware
+let favorites = require('./routes/controllers/favorites')
 const isLoggedIn = require('./middleware/isLoggedIn');
 
 app.set('view engine', 'ejs');
@@ -69,11 +70,15 @@ app.use('/auth', require('./routes/auth'));
 //   res.render('landing')
 // })
 
-app.get('/faves',isLoggedIn,(req,res)=>{
-  db.favorites.findAll().then(allFaves =>{
-      res.render('faves', {allFaves})
-  })
-})
+// app.get('/faves',isLoggedIn,(req,res)=>{
+//   console.log('im here')
+//   db.favorites.findAll().then(allFaves =>{
+//       console.log('im now')
+//       res.render('faves', {allFaves})
+//   })
+// })
+
+app.use("/faves", favorites)
 
 app.get('/landing',(req,res)=>{
   res.render('landing');
