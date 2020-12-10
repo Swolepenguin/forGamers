@@ -119,5 +119,16 @@ padding: 25px;
 }
 
 .cards{
-  
+  display: table-row-group;
+}
+
+.SG{
+  color: blue;
+  text-align: center;
+  font-size: 50px;
+}
+
+.profile{
+  color: blue;
+  text-align: center;
 }

@@ -7,19 +7,20 @@ const ejslayouts = require('express-ejs-layouts')
 const { Router } = require('express')
 
 
-router.get('/',function(req,res){
+router.get('/:id',function(req,res){
     console.log('hello from synopsis controller')
+    console.log(req.params.id)
     const url3= `https://api.rawg.io/api/games/${req.params.id}?key=${process.env.API_KEY}`
     axios.get(url3)
-    .then((res) => {
-        console.log(res.data)
+    .then((resultData) => {
+        // console.log(resultData)
         res.render('synopsis', {
-            games: res.data.results
+            game: resultData.data
         })
     })
     .catch(error => res.json(error))
-    console.log('hello')
+    console.log('HEY OVER JERE')
     
 })
 
-module.exports=Router
+module.exports=router

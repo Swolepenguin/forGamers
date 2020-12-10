@@ -1,24 +1,25 @@
-<script>
+<!-- <script>
     debugger
-</script> 
+</script>  -->
 
 
-    
-<form action="/landing" method="GET">
-    <ul class="cards">
+    <div class="SG">Searched games</div>
+
+    <ul class="cards" style="color:black">
         <%  searchedGame.forEach(gm => { %> 
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" style="flex-wrap: wrap;">
                 <img class='cardimg' src="<%= gm.background_image %> "> </img>           
-                <div class="card-body">
-                <h5 class="card-title">title: <%= gm.name %></h5>
-                <p class="card-text"> year released:<%= gm.released %> </p>
-                <p class="card-text">rating:<%= gm.rating %> </p>
-                <a href="/synopsis" class="btn btn-primary">Go somewhere</a>
-                <input type="hidden" value="<%=gm.id %> " name="game" id="game"> 
+                <div class="card-body" style="color: gray;">
+                    <h5 class="card-title">Title: <%= gm.name %></h5>
+                    <p class="card-text"> Release Date:<%= gm.released %> </p>
+                    <p class="card-text">Rating: <%= gm.rating %> </p>
+                    <p class="card-text">Platforms: <%= gm.platforms %> </p>
+                    <a href="/synopsis/<%=gm.id%>" class="btn btn-primary">More</a>
+                    <input type="hidden" value="<%=gm.id %> " name="game" id="game">                
                 </div>
             </div>
 
         <% }) %> 
     </ul>
-</form>
+
