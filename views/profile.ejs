@@ -1,3 +1,6 @@
 <h3 class="profile">Welcome to your PROFILE </h3>
-<h4 class="profile"> Here you can acsess your favorites and edit your Username</h4>
-
+<h4 class="profile"> Here you can edit your Username</h4>
+<form action="/profile/?_method=PUT" method="POST">
+    <input type="text" placeholder="New Name" name="name" id="name"/>
+    <input type="submit" value="Change Username">
+</form>

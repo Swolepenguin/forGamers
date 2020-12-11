@@ -13,7 +13,11 @@ let searchedGames = require('./routes/controllers/searchedgame')
 let synopsis = require('./routes/controllers/synopsis')
 // isLoggedIn middleware
 let favorites = require('./routes/controllers/favorites')
+let profile = require('./routes/controllers/profile')
 const isLoggedIn = require('./middleware/isLoggedIn');
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'))
+
 
 app.set('view engine', 'ejs');
 
@@ -58,10 +62,10 @@ app.get('/', (req, res) => {
   res.render('index', { alerts: res.locals.alerts });
 });
 
-app.get('/profile', isLoggedIn, (req, res) => {
-  res.render('profile');
-});
-
+// app.get('/profile', isLoggedIn, (req, res) => {
+//   res.render('profile');
+// });
+app.use('/profile', profile)
 
 app.use('/auth', require('./routes/auth'));
 // My routes
@@ -84,7 +88,9 @@ app.get('/landing',(req,res)=>{
   res.render('landing');
 });
 
-
+app.get('/', (req, res) => {
+  res.render('404')
+})
 
 // app.get('/games',(req,res)=>{
 //   res.render('games')

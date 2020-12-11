@@ -132,3 +132,8 @@ padding: 25px;
   color: blue;
   text-align: center;
 }
+.error{
+  color: white;
+  text-align: center;
+  font-size: 600%;
+}
