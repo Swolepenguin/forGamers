@@ -112,7 +112,14 @@ wireframe
 Format: ![Alt Text](url) 
 
 
-currently as it stands my project is wildly unfinished i spent most of and too much time reading over every possible express, ejs, routes and psql database article and help page that i could find trying to learn as much as i could about the project but i didnt feel as if i had it solid enough the problem was that i got to saturday and was still learning im now alot more comfortable doing this but it just isnt completed yet but after todays i feel confident that ill be able to bang the rest out completely.
 
 
-forGamers is an app made for Gamers by Gamers where you can search around for the next game that you want to buy. Why use forGamers, the reason is that its an app based around the community of people who love to play games you can read other likeminded people's experience and what they thought about the game side by side the synopsis's that the develepors that way you know exactly what game you want and why. You can also create your own account and write your own comments on games to help others in the community filter and find the perfect next game for themselves.
+
+forGamers is an app made for Gamers by Gamers where you can search around for the next game that you may want to buy. 
+
+Apps used:
+The apps and languges used to make this app are Express,Ejs,Javscript, CSS, Node as well as heroku for deployment 
+
+the way this app works is by using GET, POST, DELETE, and PUT routes to pull up and render ejs pages as well as edit the information thats displayed on the page and edits the tables in the database 
+
+Here is my initial design for the project 

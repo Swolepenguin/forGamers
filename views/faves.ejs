@@ -1,9 +1,10 @@
 <script>debugger</script>
 
+<h1 class="faveg"> Your Favorites</h1>
 <ul>  
     <% favorites.forEach(( fave)=>{ %>
-      <form action="/faves/?_method=DELETE" method="POST">
-        <p> <%= fave.Game%></p>
+      <form class="faveg" action="/faves/?_method=DELETE" method="POST">
+        <p class="faveg"> <%= fave.Game%></p>
         <input type="submit" value="Delete" />
         <input type="hidden" value="<%= fave.id %>" name="id" id="fave"/>
       </form>      
