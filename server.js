@@ -9,7 +9,7 @@ const app = express();
 const axios = require('axios'); 
 let db = require("./models")
 let newReleases = require('./routes/controllers/newReleases')
-let searchedGames = require('./routes/controllers/searchedgame')
+let searchedGames = require('./routes/controllers/searchedGame')
 let synopsis = require('./routes/controllers/synopsis')
 // isLoggedIn middleware
 let favorites = require('./routes/controllers/favorites')
